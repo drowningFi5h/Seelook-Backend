@@ -44,6 +44,12 @@ const plugins = [
     },
   },
   {
+    resolve: `@rsc-labs/medusa-documents`,
+    options: {
+      enableUI: true
+    }
+  },
+  {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
