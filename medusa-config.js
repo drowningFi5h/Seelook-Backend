@@ -67,7 +67,10 @@ const modules = {
     options: {
       redisUrl: process.env.CACHE_REDIS_URL,
 
-    }
+    },
+    router: {
+      enabled: true,
+    },
   },
 };
 
@@ -80,11 +83,17 @@ const projectConfig = {
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
   redis_url: process.env.CACHE_REDIS_URL,
+
 };
 
+const services = {
+    gstVerificationService: 'GSTVerificationService'
+
+}
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
   plugins,
   modules,
+  services,
 };
