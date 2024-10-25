@@ -83,6 +83,7 @@ const projectConfig = {
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
   redis_url: process.env.CACHE_REDIS_URL,
+  port: process.env.PORT || 9000,
 
 };
 
