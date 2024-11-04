@@ -84,6 +84,18 @@ const projectConfig = {
   // Uncomment the following lines to enable REDIS
   redis_url: process.env.CACHE_REDIS_URL,
   port: process.env.PORT || 9000,
+  database_extra:
+    process.env.NODE_ENV === "production"
+      ? {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+        pool: {
+          min: 2,
+          max: 10,
+        },
+      }
+      : {},
 
 };
 
