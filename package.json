@@ -19,8 +19,8 @@
     "watch": "cross-env tsc --watch",
     "test": "cross-env jest",
     "seed": "cross-env medusa seed -f ./data/seed.json",
-    "start": "node --max-old-space-size=4096 index.js medusa start ",
-    "build": "npm run clean && npm run build:server && npm run build:admin",
+    "start": "node --max-old-space-size=500 index.js medusa start ",
+    "build": "npm run clean && npm run build:server",
     "start:custom": "cross-env npm run build && node --max-old-space-size=4096 --preserve-symlinks --trace-warnings index.js",
     "dev": "cross-env npm run build:server && medusa develop"
   },
@@ -28,7 +28,6 @@
     "node": ">=20 <21"
   },
   "dependencies": {
-    "@medusajs/admin": "^7.1.16",
     "@medusajs/cache-inmemory": "1.8.11",
     "@medusajs/cache-redis": "^1.9.2",
     "@medusajs/event-bus-local": "1.9.9",
