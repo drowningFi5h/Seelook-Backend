@@ -81,6 +81,7 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
+  worker_mode: process.env.MEDUSA_WORKER_MODE,
   // Uncomment the following lines to enable REDIS
   redis_url: process.env.CACHE_REDIS_URL,
   port: process.env.PORT || 9000,
